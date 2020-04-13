@@ -1,7 +1,7 @@
 #ifdef UNIT_TEST
 
 #include <unity.h>
-#include "mod1.h"
+#include "test/pioAtomTest-1/mod1.h"
 
 // Define the test
 void test_mod1()
