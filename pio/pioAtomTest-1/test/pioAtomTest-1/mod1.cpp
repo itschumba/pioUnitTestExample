@@ -1,4 +1,4 @@
-#include "mod1.h"
+#include "test/pioAtomTest-1/mod1.h"
 
 void mod1_init(mod1_t *obj)
 {
