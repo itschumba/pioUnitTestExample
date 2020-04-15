@@ -1,0 +1,16 @@
+@todo: Check in with Alois to ensure we're capturing everything needed for certification
+
+High Levelv Summary:
+    - Is this a bugfix? Give a brief description of bug
+    - Is this a feature? Give a brief description of featuer
+    
+Technical Summary Of Changes in Push:
+    - How do changed addres bufix/feature implementation
+    
+Reviwers:
+    - List them here
+
+Testing:
+    - Include 
+        - A detailed summary of how code was tested
+        - Copy of results. For example, if a bugfix, include output before and after bugfix
