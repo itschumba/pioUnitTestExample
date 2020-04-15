@@ -24,11 +24,11 @@ int test_serialAddition(int a, int b)
  */
 void serialCommInit(int baudRate)
 {
-    //Serial.begin(baudRate);
+    Serial.begin(baudRate);
 }
 
 
 void serialPrint(int val)
 {
-    //Serial.println(val);
+    Serial.println(val);
 }

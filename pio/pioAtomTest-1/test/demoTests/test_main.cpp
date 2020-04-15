@@ -21,7 +21,7 @@ void example_test_mod1()
     // Run process and check to see if member a changed sensorValue
     // NOTE: no set ran before we get here...
     mod1_process(&test_obj);
-    TEST_ASSERT_EQUAL(mod1_get_a(&test_obj),17);
+    TEST_ASSERT_EQUAL(mod1_get_a(&test_obj),18);
 }
 
 // Define driverUnitTest

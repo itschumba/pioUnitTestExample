@@ -5,14 +5,12 @@
  #ifndef TESTDEFS_H_
  #define TESTDEFS_H_
  /*
-  * It's taking me too much time to find where the internal UNIT_TEST build
-  * switch is defined so that I can figure out how to toggle it from this level
+  * @todo:: Find where the internal UNIT_TEST build build swith is defind and
+  *        figure out how to use it
   *
-  * @todo:: figure this out so that the atumoation environment doesn't have to
-  *         pass this into the build script?
+  * @todo:: figure this out how to pass parameters to build script so that
+  *         switch features can be controled fron an external source
   *
-  * possible sol: may not be hard so maybe just have an argument passed that
-  *               flips this swithc?
  */
 
  #define VK_UNIT_TEST_BUILD        1
