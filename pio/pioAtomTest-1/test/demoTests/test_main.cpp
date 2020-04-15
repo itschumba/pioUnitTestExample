@@ -1,15 +1,9 @@
 #ifdef UNIT_TEST
 
 #include <unity.h>
-<<<<<<< Updated upstream:pio/pioAtomTest-1/test/pioAtomTest-1/test_main.cpp
-#include "mod1.h"
-=======
 #include "test/example/example.h"
 #include "test/driverUnitTest/driverUnitTest.h"
->>>>>>> Stashed changes:pio/pioAtomTest-1/test/test_main.cpp
 
-//@todo:: check to see if there's ADD_TEST macro so that actual definition
-//        of test can be describled in the source file to keep this file clean
 
 // Define example test
 void example_test_mod1()
@@ -47,6 +41,9 @@ void driverUnitTest_test()
 int main( int argc, char **argv)
 {
     UNITY_BEGIN();
+
+    //@todo:: check to see if there's ADD_TEST macro so that actual definition
+    //        of test can be describled in the source file to keep this file clean
 
     RUN_TEST(example_test_mod1);
     RUN_TEST(driverUnitTest_test);
