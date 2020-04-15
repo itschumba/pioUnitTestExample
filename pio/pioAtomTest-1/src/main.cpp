@@ -9,43 +9,37 @@
 // Code from here on is what is actual source code. Should look famimiar!
 //-----------------------------------------------------------------------------
 
-// To get adruino specific libraries
-#include <Arduino.h>
+#include <Arduino.h>                // Left in to enable setting/changing 'sensorPin' here. Ideally it should not be included this file
+#include "src/common/boardConfig.h"
+#include "src/drivers/led/led.h"
+#include "src/drivers/serial/serial.h"
+#include "src/drivers/analog/analog.h"
+#include "src/module/driverTest/driverTest.h"
 
+// Temp Global Declarations
 int sensorPin = A2;    // select the input pin for the potentiometer
-int ledPin = 13;      // select the pin for the LED
 int sensorValue = 0;  // variable to store the value coming from the sensor
+int driverTestResult = 0;
+
 
 void setup()
 {
-    // declare the ledPin as an OUTPUT:
-    pinMode(ledPin, OUTPUT);
-
-    // initialize serial communication at 9600 bits per second:
-    Serial.begin(9600);
+    ledInit();
+    serialCommInit(BAUD_RATE_9600);
 }
 
-// Monitor serial port from pio and veirify output
 void loop()
 {
-    // read the value from the sensor:
-    sensorValue = analogRead(sensorPin);
+    // Read an input from an analog 'sensorPin' value set above
+    sensorValue = testAnalogReadAndDelay(sensorPin);
+    serialPrint(sensorValue); // Monitor serial port from pio and veirify output
 
-    // read the input on analog pin 0:
-    int sensorValue = analogRead(sensorPin);
+    // Flashes LED light on Adruino
+    ledOnAndDelay(sensorValue);
+    ledOffAndDelay(sensorValue);
 
-    // print out the value you read:
-    Serial.println(sensorValue);
-
-    // turn the ledPin on
-    digitalWrite(ledPin, HIGH);
-
-    // stop the program for <sensorValue> milliseconds:
-    delay(sensorValue);
-
-    // turn the ledPin off:
-    digitalWrite(ledPin, LOW);
-
-    // stop the program for for <sensorValue> milliseconds:
-    delay(sensorValue);
+    // Excercise module and print out result in terminal window.
+    // FYI, this will always print resutl of actual code
+    driverTestResult = test_driverAddition();
+    serialPrint(driverTestResult); // Monitor serial port result
 }
