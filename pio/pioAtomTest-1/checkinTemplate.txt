@@ -1,16 +1,16 @@
 @todo: Check in with Alois to ensure we're capturing everything needed for certification
 
-High Levelv Summary:
+### High Level Summary:
     - Is this a bugfix? Give a brief description of bug
-    - Is this a feature? Give a brief description of featuer
-    
+    - Is this a feature? Give a brief description of feature
+
 Technical Summary Of Changes in Push:
-    - How do changed addres bufix/feature implementation
-    
-Reviwers:
+    - How do changed address bufix/feature implementation
+
+Reviewers:
     - List them here
 
 Testing:
-    - Include 
+    - Include
         - A detailed summary of how code was tested
         - Copy of results. For example, if a bugfix, include output before and after bugfix
