@@ -5,7 +5,7 @@
     - Is this a feature? Give a brief description of feature
 
 Technical Summary Of Changes in Push:
-    - How do changed address bufix/feature implementation
+    - How do changed address bugfix/feature implementation
 
 Reviewers:
     - List them here

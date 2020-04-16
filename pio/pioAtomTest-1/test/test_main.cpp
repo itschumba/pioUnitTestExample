@@ -1,10 +1,12 @@
 #ifdef UNIT_TEST
 
 #include <unity.h>
-#include "test/pioAtomTest-1/mod1.h"
+#include "test/example/example.h"
+#include "test/driverUnitTest/driverUnitTest.h"
 
-// Define the test
-void test_mod1()
+
+// Define example test
+void example_test_mod1()
 {
     // Declare test object
     mod1_t test_obj;
@@ -22,12 +24,29 @@ void test_mod1()
     TEST_ASSERT_EQUAL(mod1_get_a(&test_obj),18);
 }
 
+// Define driverUnitTest
+void driverUnitTest_test()
+{
+    //Declare test object
+    driverUnitTest_t test_obj;
+
+    driverTest_init(&test_obj);
+    driverTest_set_result(&test_obj);
+
+    // Test will assert if a non-zero value is stored after calling test_driverAddition
+    TEST_ASSERT_EQUAL(driverTest_get_result(&test_obj),0);
+}
+
 // Run the test
 int main( int argc, char **argv)
 {
     UNITY_BEGIN();
 
-    RUN_TEST(test_mod1);
+    //@todo:: check to see if there's ADD_TEST macro so that actual definition
+    //        of test can be describled in the source file to keep this file clean
+
+    RUN_TEST(example_test_mod1);
+    RUN_TEST(driverUnitTest_test);
 
     UNITY_END();
 }
