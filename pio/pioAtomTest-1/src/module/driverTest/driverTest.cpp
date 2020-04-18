@@ -13,8 +13,8 @@
  * Purpose of this function is to prove that we can switch on/off features
  * easily
 */
-// @todo:: figure out how to get LOCAL_UNIT_TEST_BUILD to work
-//#ifdef LOCAL_UNIT_TEST_BUILD
+// @todo:: figure out how to get UNIT_TEST to work
+//#ifdef UNIT_TEST
 /*
  int test_driverAddition (void)
  {
